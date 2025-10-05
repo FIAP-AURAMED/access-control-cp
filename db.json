@@ -1,0 +1,35 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "Beatriz",
+      "nomeUsuario": "bia2004",
+      "email": "beatrizalves@gmail.com"
+    },
+    {
+      "id": "2",
+      "nome": "Tiago",
+      "nomeUsuario": "tiaguinhoA",
+      "email": "tiago@gmail.com"
+    },
+    {
+      "id": "3",
+      "nome": "Marcelo",
+      "nomeUsuario": "marcelinho",
+      "email": "marcelorogerio@gmail.com"
+    },
+    {
+      "id": "4",
+      "nome": "Manuela Bastos",
+      "nomeUsuario": "manubastos",
+      "email": "manubastos2003@gmail.com"
+    },
+    {
+      "id": "5",
+      "nome": "Heitor",
+      "nomeUsuario": "heitor45",
+      "email": "heitorsilva@gmail.com"
+    }
+    
+  ]
+}
