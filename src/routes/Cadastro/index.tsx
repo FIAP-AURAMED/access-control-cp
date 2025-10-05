@@ -1,6 +1,6 @@
 
 
-export default function App() {
+export default function Cadastro() {
     return (
         <div>
             
