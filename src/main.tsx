@@ -13,9 +13,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 const router = createBrowserRouter([
   {
-    path: "/login", element: <App />, errorElement: <Error />, children: [
-      {path: "/login", element: <Login/>},
-      {path: "cadastro", element: <Cadastro/>}
+    path: "/", element: <App />, errorElement: <Error />, children: [
+      {path: "/", element: <Login/>},
+      {path: "/cadastro", element: <Cadastro/>}
     ]}
 ]);
 
