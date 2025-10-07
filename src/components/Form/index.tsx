@@ -1,4 +1,5 @@
 
+import { useForm } from "react-hook-form";
 import type { TipoUsuario } from "../../types/tipoUsu";
  
 interface FormProps {
@@ -9,7 +10,9 @@ interface FormProps {
 }
  
  
-export default function Form() {
+export default function Form({ onSubmit, fields, buttonText, legend }: FormProps) {
+
+    const { register, handleSubmit, formState: { errors } } = useForm<TipoUsuario>();
  
     return (
         <div></div>
