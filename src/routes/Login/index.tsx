@@ -40,6 +40,12 @@ export default function Login() {
  
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+            <Form
+                onSubmit={onSubmit}
+                legend="Login"
+                fields={['nomeUsuario', 'email']}
+                buttonText="Entrar"/>
+ 
             
         </div>
     )
