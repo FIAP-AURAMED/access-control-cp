@@ -26,7 +26,20 @@ export default function Cadastro() {
                 return;
             }
  
-            
+            const novoUsuarioResponse = await fetch(`${API_URL}`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({...data, id: String(usuarios.length +1)}),
+            });
+ 
+            if (!novoUsuarioResponse.ok) {
+                throw new Error ("Erro ao cadastrar funcionário");
+            }
+ 
+            alert("Usuário cadastrado com sucesso")
+            navigate("/");
         } catch (error) {
             console.error("Falha no cadastro", error);
             alert("Ocorreu um erro ao tentar cadastrar.");
