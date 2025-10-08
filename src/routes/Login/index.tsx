@@ -24,7 +24,7 @@ export default function Login() {
 
             if (usuario) {
                 sessionStorage.setItem('usuarioLogado', JSON.stringify(usuario));
-                navigate('/');
+                navigate('/home');
             } else {
                 alert('Nome de usuário ou e-mail inválidos');
             }
