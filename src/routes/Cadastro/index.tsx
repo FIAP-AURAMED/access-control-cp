@@ -55,7 +55,7 @@ export default function Cadastro() {
             buttonText="Cadastrar"
             />
  
-            
+            <p className="text-sm text-center text-gray-600 mt-8">Já possui conta? <Link to='/' className="font-medium text-pink-600 hover:text-pink-500">Faça Login</Link></p>
         </div>
     )
 }
