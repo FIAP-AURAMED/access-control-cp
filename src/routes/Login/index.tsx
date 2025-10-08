@@ -46,7 +46,7 @@ export default function Login() {
                 fields={['nomeUsuario', 'email']}
                 buttonText="Entrar"/>
  
-            
+            <p className="text-sm text-center text-gray-600 mt-8">Não tem uma conta? <Link to='/cadastro' className="font-medium text-pink-600 hover:text-pink-500">Cadastre-se</Link></p>
         </div>
     )
 }
