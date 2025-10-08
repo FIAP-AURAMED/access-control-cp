@@ -64,13 +64,6 @@ Siga os passos abaixo para rodar o projeto localmente.
 5.  **Acesse a aplicação:**
     Abra seu navegador e acesse `http://localhost:5173` (ou a porta indicada no terminal do Vite).
 
-## 👥 Integrantes do Grupo
-
-* **Nome:** [Nome Completo do Aluno] - **RM:** [Seu RM]
-* **Nome:** [Nome Completo do Aluno] - **RM:** [Seu RM]
-* **Nome:** [Nome Completo do Aluno] - **RM:** [Seu RM]
-* **Nome:** [Nome Completo do Aluno] - **RM:** [Seu RM]
-
 ## 👥 Integrantes
 
 | Nome | RM | Turma | GitHub | LinkedIn |
