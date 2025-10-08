@@ -16,7 +16,18 @@ export default function Login() {
                 throw new Error('Erro ao buscar usuários');
             }
  
-            
+            const usuarios: TipoUsuario[] = await response.json();
+ 
+            const usuario = usuarios.find(
+                (usu) => usu.nomeUsuario == data.nomeUsuario && usu.email == data.email
+            );
+
+            if (usuario) {
+                sessionStorage.setItem('usuarioLogado', JSON.stringify(usuario));
+                navigate('/');
+            } else {
+                alert('Nome de usuário ou e-mail inválidos');
+            }
  
             
         } catch (error) {
