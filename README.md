@@ -1,73 +1,86 @@
-# React + TypeScript + Vite
+# Sistema de Controle de Acesso - CheckPoint FIAP
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto foi desenvolvido como parte do CheckPoint da FIAP para a matéria de front-end. A aplicação consiste em um sistema simples de controle de acesso de usuários, implementando funcionalidades de cadastro e login, utilizando React, Vite e TypeScript.
 
-Currently, two official plugins are available:
+A autenticação é validada contra um mock backend criado com `json-server`, e a sessão do usuário é gerenciada através da `sessionStorage` do navegador.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Funcionalidades
 
-## React Compiler
+* **Tela de Login**: Permite que um usuário existente acesse o sistema com `nomeUsuario` e `email`.
+* **Tela de Cadastro**: Permite que um novo usuário se cadastre. O sistema valida se o `nomeUsuario` ou `email` já existem para evitar duplicidade.
+* **Página Home Protegida**: Uma página principal que só pode ser acessada após um login bem-sucedido.
+* **Exibição de Dados do Usuário**: A página Home exibe o nome e o email do usuário logado.
+* **Funcionalidade de Logout**: O usuário pode sair do sistema, limpando sua sessão.
+* **Validação de Formulário**: Todos os campos dos formulários de login e cadastro são validados com `react-hook-form`.
+* **Notificações Customizadas**: Alertas estilizados com Tailwind CSS são usados para fornecer feedback ao usuário (sucesso, erro, etc.).
+* **Componentes Reutilizáveis**: A estrutura do projeto utiliza componentes genéricos para formulários e alertas, promovendo a reutilização de código.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tecnologias Utilizadas
 
-## Expanding the ESLint configuration
+* **Vite**: Build tool para um desenvolvimento front-end rápido.
+* **React**: Biblioteca para construção da interface de usuário.
+* **TypeScript**: Superset do JavaScript que adiciona tipagem estática.
+* **Tailwind CSS**: Framework de CSS utility-first para estilização.
+* **React Router DOM**: Para gerenciamento de rotas e navegação (SPA).
+* **React Hook Form**: Para validação e gerenciamento de formulários.
+* **json-server**: Para criar um mock backend RESTful a partir de um arquivo `db.json`.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ⚙️ Configuração e Instalação
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Siga os passos abaixo para rodar o projeto localmente.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Passos
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1.  **Clone o repositório:**
+    ```bash
+    git clone [URL_DO_SEU_REPOSITORIO]
+    cd access-control-cp
+    ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2.  **Instale as dependências:**
+    ```bash
+    npm install
+    ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+3.  **Crie o arquivo de variáveis de ambiente:**
+    Crie um arquivo chamado `.env` na raiz do projeto e adicione a seguinte linha:
+    ```
+    VITE_API_URL_BASE=http://localhost:3000/usuarios
+    ```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+4.  **Inicie os servidores (requer 2 terminais):**
+
+    * **No primeiro terminal**, inicie o mock backend (`json-server`):
+        ```bash
+        npm run api
+        ```
+        *Deixe este terminal rodando.*
+
+    * **No segundo terminal**, inicie a aplicação React (Vite):
+        ```bash
+        npm run dev
+        ```
+
+5.  **Acesse a aplicação:**
+    Abra seu navegador e acesse `http://localhost:5173` (ou a porta indicada no terminal do Vite).
+
+## 👥 Integrantes do Grupo
+
+* **Nome:** [Nome Completo do Aluno] - **RM:** [Seu RM]
+* **Nome:** [Nome Completo do Aluno] - **RM:** [Seu RM]
+* **Nome:** [Nome Completo do Aluno] - **RM:** [Seu RM]
+* **Nome:** [Nome Completo do Aluno] - **RM:** [Seu RM]
+
+## 👥 Integrantes
+
+| Nome | RM | Turma | GitHub | LinkedIn |
+| :--- | :--- | :--- | :--- | :--- |
+| Diego Andrade | 566385 | 1TDSPO | [diandrade](https://github.com/diandrade) | [LinkedIn](https://www.linkedin.com/in/andradedossantosdiego/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app) |
+| Grazielle Alencar | 561529 | 1TDSPO | [grazialencar](https://github.com/grazialencar) | [LinkedIn](https://www.linkedin.com/in/grazielle-alencar/) |
+| Isabela Yamauchi | 560310 | 1TDSPO | [IsabelaYamauchi](https://github.com/IsabelaYamauchi) | [LinkedIn](https://www.linkedin.com/in/isabelayamauchi/) |
+
+---
+
+## Repositório no GitHub
+
+🔗 [https://github.com/FIAP-AURAMED/access-control-cp.git](https://github.com/FIAP-AURAMED/access-control-cp.git) 
