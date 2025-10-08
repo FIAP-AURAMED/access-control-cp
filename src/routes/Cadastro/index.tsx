@@ -48,6 +48,13 @@ export default function Cadastro() {
  
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+            <Form
+            onSubmit={onSubmit}
+            legend="Cadastro"
+            fields={['nome', 'nomeUsuario', 'email']}
+            buttonText="Cadastrar"
+            />
+ 
             
         </div>
     )
